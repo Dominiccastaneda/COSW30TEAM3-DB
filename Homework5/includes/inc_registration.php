@@ -60,7 +60,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <main>
         <h1>Sticky Form</h1>
 
-        <form action="register.php" method="POST">
+        <form action="inc_register.php" method="POST">
             <label for="first_name">First Name</label>
             <input type="first_name" id="first_name" name="first_name" placeholder="" value="<?php echo $first_name ?>">
             <br><br>
