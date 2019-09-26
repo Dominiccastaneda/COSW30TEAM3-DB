@@ -36,6 +36,35 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
       echo  "Confirm your password please";
     }
 }
+
+    if(!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['confirm_password']))
+    {
+
+   $first_name = $_POST['first_name'];
+   $last_name = $_POST['last_name'];
+   $email = $_POST['email'];
+   $password = $_POST['password'];
+   $confirm_password = $_POST['confirm_password'];
+
+
+ // validate the password with the confirm password
+    if ($password == $confirm_password){
+        echo '<h2>Congratulation you have registered correctly.</h2>';
+        echo "<p>First Name: $first_name</p>";
+        echo "<p>Last Name: $last_name</p>";
+        echo "<p>Email Address: $email</p>";
+        echo "<p>Password: $password</p>";
+    }
+    else {
+        echo '<h2>Password do not match. Please try again.</h2>';
+    }
+
+
+    }
+    else {
+        echo "<h2>Validation Error</h2>";
+    }
+
 ?>
 
     <main>
@@ -44,15 +73,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         <form action="register.php" method="POST">
             <label for="first_name">First Name</label>
             <input type="first_name" id="first_name" name="first_name" placeholder="" value="<?php echo $first_name ?>">
+            <br>
             <label for="last_name">Last Name</label>
             <input type="last_name" id="last_name" name="last_name" placeholder="" value="<?php echo $last_name ?>">
+            <br>
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="email" value="<?php echo $email ?>">
+            <br>
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="" value="<?php echo $password ?>">
+            <br>
             <label for="confirm_password">Confirm Password</label>
-            <input type="confirm_password" id="confirm_password" name="confirm_password" placeholder="" value="<?php echo $confirm_password ?>">
-
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="" value="<?php echo $confirm_password ?>">
+            <br>
             <input type="submit" name="submit" value="Submit"/>
     </main>
 
