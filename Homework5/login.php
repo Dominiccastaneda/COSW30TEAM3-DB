@@ -25,6 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="email" id="email" name="email" placeholder="email" value="<?php echo $email ?>">
             <label for="password">Password</label>
             <input type="password" id="password" name="password">
+            
             <button>Register!</button>
     </main>
 
