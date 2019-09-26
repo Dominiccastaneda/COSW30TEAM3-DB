@@ -17,9 +17,9 @@
 
     <div id="header">
     <ul id="nav">
-        <li><a href="register.php">REGISTER</a></li>
-        <li><a href="login.php">LOGIN</a></li>
         <li><a href="index.php">HOME</a></li>
+        <li><a href="login.php">LOGIN</a></li>
+        <li><a href="register.php">REGISTER</a></li>
     </ul>
     </div><!-- header -->
 
