@@ -18,19 +18,24 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $confirm_password = $_POST['confirm_password'];
     // validate
     if(empty($first_name)) {
-      echo  "Enter your first name please<br>";
+      echo  "Enter your first name please";
+      echo '<br>';
     }
     if(empty($last_name)) {
-      echo  "Enter your last name please"<br>;
+      echo  "Enter your last name please";
+      echo '<br>';
     }
     if(empty($email)) {
-      echo  "Enter your email please"<br>;
+      echo  "Enter your email please";
+      echo '<br>';
     }
     if(empty($password)) {
-      echo  "Enter your password please"<br>;
+      echo  "Enter your password please";
+      echo '<br>';
     }
     if(empty($confirm_password)) {
-      echo  "Confirm your password please"<br>;
+      echo  "Confirm your password please";
+      echo '<br>';
     }
 }
 
