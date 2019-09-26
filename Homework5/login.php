@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <form action="login.php" method="POST">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="test" value="<?php echo $email ?>">
+            <input type="email" id="email" name="email" placeholder="email" value="<?php echo $email ?>">
             <label for="password">Password</label>
             <input type="password" id="password" name="password">
             <button>Register!</button>
