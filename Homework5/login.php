@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $$password = $_POST['password'];
     // validate
     if(empty($email)) {
-        $error = 'Enter your Email please';
+      echo  "Enter your Email please";
     }
 }
 ?>
