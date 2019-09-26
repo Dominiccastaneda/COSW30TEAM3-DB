@@ -3,7 +3,7 @@
 <?php include('includes/header.php'); ?>
 <?php
 
-$email = "";
+$email = "myemail@myemail.com";
 $password = "";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -11,7 +11,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $$password = $_POST['password'];
     // validate
-//    if(empty)
+    if(empty($email)) {
+        $error = 'Enter your Email please';
+    }
 }
 ?>
 
@@ -23,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="email" id="email" name="email" placeholder="test" value="<?php $email ?>">
             <label for="password">Password</label>
             <input type="password" id="password" name="password">
-
+            <button>Register!</button>
     </main>
 
 <?php include('includes/footer.php'); ?>
