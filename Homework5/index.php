@@ -3,8 +3,6 @@
 <?php include('includes/header.php'); ?>
 
 
-
-
     <main>
         <h1>This Is The Homepage</h1>
     </main>
