@@ -18,19 +18,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $confirm_password = $_POST['confirm_password'];
     // validate
     if(empty($first_name)) {
-      echo  "Enter your first name please";
+      echo  "Enter your first name please<br>";
     }
     if(empty($last_name)) {
-      echo  "Enter your last name please";
+      echo  "Enter your last name please"<br>;
     }
     if(empty($email)) {
-      echo  "Enter your email please";
+      echo  "Enter your email please"<br>;
     }
     if(empty($password)) {
-      echo  "Enter your password please";
+      echo  "Enter your password please"<br>;
     }
     if(empty($confirm_password)) {
-      echo  "Confirm your password please";
+      echo  "Confirm your password please"<br>;
     }
 }
 
@@ -40,10 +40,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
  // validate the password with the confirm password
     if ($password == $confirm_password){
         echo '<h2>Congratulation you have registered correctly.</h2>';
-        echo "<p>First Name: $first_name</p>";
-        echo "<p>Last Name: $last_name</p>";
-        echo "<p>Email Address: $email</p>";
-        echo "<p>Password: $password</p>";
     }
     else {
         echo '<h2>Password do not match. Please try again.</h2>';
