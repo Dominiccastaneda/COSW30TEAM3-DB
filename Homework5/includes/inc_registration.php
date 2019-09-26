@@ -51,7 +51,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     }
     else {
-        echo "<h2>Validation Error</h2>";
+        echo "<h2>Please Enter Your Information</h2>";
     }
 
 ?>
