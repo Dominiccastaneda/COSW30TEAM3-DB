@@ -1,10 +1,6 @@
 <?php
-
-
-
 $email = "";
 $password = "";
-
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Procees our form and validate it
     $email = $_POST['email'];
@@ -19,15 +15,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
       echo '<br>';
     }
 }
-
 ?>
 
     <main>
-        <h1>Sticky Form</h1>
+        
+
+        <h1>MAIN CONTENT LOGIN PAGE</h1>
 
         <form action="login.php" method="POST">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="email" value="<?php echo $email ?>">
+            <input type="email" id="email" name="email" placeholder="example@mail.com" value="<?php echo $email ?>">
             <br><br>
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="" value="<?php echo $password ?>">

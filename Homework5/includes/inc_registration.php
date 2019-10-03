@@ -1,14 +1,9 @@
 <?php
-
-
 $first_name = "";
 $last_name = "";
 $email = "";
 $password = "";
 $confirm_password = "";
-
-
-
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Procees our form and validate it
     $first_name = $_POST['first_name'];
@@ -38,27 +33,23 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
       echo '<br>';
     }
 }
-
     if(!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['confirm_password']))
     {
-
  // validate the password with the confirm password
     if ($password == $confirm_password){
-        echo '<h2>Congratulation you have registered correctly.</h2>';
+        echo '<h3>Congratulation you have registered correctly.</h3>';
     }
     else {
-        echo '<h2>Password do not match. Please try again.</h2>';
+        echo '<h3>Password do not match. Please try again.</h3>';
     }
-
     }
     else {
-        echo "<h2>Please Enter Your Information</h2>";
+        echo "<h3>Please Enter Your Information</h3>";
     }
-
 ?>
 
     <main>
-        <h1>Sticky Form</h1>
+        <h1>MAIN CONTENT REGISTER PAGE</h1>
 
         <form action="register.php" method="POST">
             <label for="first_name">First Name</label>
@@ -68,7 +59,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="last_name" id="last_name" name="last_name" placeholder="" value="<?php echo $last_name ?>">
             <br><br>
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="email" value="<?php echo $email ?>">
+            <input type="email" id="email" name="email" placeholder="example@mail.com" value="<?php echo $email ?>">
             <br><br>
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="" value="<?php echo $password ?>">
